@@ -1,0 +1,19 @@
+LG-EffNetV2-S (grade + lesion heads), official MMRDR CFP test set (n = 2,225)
+(copied from the executed notebook 02_LG-EffNetV2-S.ipynb)
+
+               precision    recall  f1-score   support
+
+        No DR      0.963     0.954     0.959      1323
+    Mild NPDR      0.543     0.660     0.596       259
+Moderate NPDR      0.752     0.660     0.703       409
+  Severe NPDR      0.628     0.760     0.688       100
+          PDR      0.958     0.858     0.906       134
+
+     accuracy                          0.851      2225
+    macro avg      0.769     0.778     0.770      2225
+ weighted avg      0.860     0.851     0.854      2225
+
+Without the 45 test images duplicated in train: accuracy 0.848, macro-F1 0.770, QWK 0.929
+Under-graded 7.7 % | over-graded 7.1 % | off by >= 2 grades 1.8 %
+Referable DR (grade >= 2): sensitivity 0.829, specificity 0.958 | missed PDR 19 / 134
+Lesion-consistency check flags 17 / 19 missed PDR cases
