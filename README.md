@@ -10,7 +10,7 @@ the findings that define each grade, and lets the model report *which* lesions i
 
 | Model | Notebook | Accuracy | Macro-F1 | QWK |
 |---|---|---|---|---|
-| **LG-EffNetV2-S** | `notebooks/02_LG-EffNetV2-S.ipynb` | **0.851** | **0.770** | **0.930** |
+| **LG-EffNetV2-S** | `LG-EffNetV2-S_model/02_LG-EffNetV2-S.ipynb` | **0.851** | **0.770** | **0.930** |
 
 ## 2. Resources
 
@@ -54,7 +54,7 @@ The notebooks were developed and run on Kaggle (Python 3.13, TensorFlow 2.20, Ke
 ### 4.1 Common setup
 
 1. Sign in to Kaggle.
-2. **Code → New Notebook → File → Import Notebook**, and upload `notebooks/02_LG-EffNetV2-S.ipynb`.
+2. **Code → New Notebook → File → Import Notebook**, and upload `LG-EffNetV2-S_model/02_LG-EffNetV2-S.ipynb`.
 3. **Add Input**:
    * `mariajabeen01/mmrdr-cfp512` (preprocessed images) — always;
    * `mariajabeen01/effnetv2s-v3-dr-weights` (trained weights) — only to use the trained LG-EffNetV2-S.
@@ -102,10 +102,10 @@ Environment variables (set them before starting Jupyter or the script):
 
 ```bash
 # LG-EffNetV2-S with the trained weights: evaluation + explanations
-bash scripts/run_notebook.sh notebooks/02_LG-EffNetV2-S.ipynb
+bash scripts/run_notebook.sh LG-EffNetV2-S_model/02_LG-EffNetV2-S.ipynb
 
 # LG-EffNetV2-S trained from scratch, then evaluation + explanations
-DRXAI_TRAIN=1 bash scripts/run_notebook.sh notebooks/02_LG-EffNetV2-S.ipynb
+DRXAI_TRAIN=1 bash scripts/run_notebook.sh LG-EffNetV2-S_model/02_LG-EffNetV2-S.ipynb
 ```
 
 ## 6. Experimental protocol and reproducibility
